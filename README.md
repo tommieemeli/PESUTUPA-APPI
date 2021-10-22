@@ -1,2 +1,3 @@
 # PESUTUPA-APPI
-School project
+
+School project / develop an app
