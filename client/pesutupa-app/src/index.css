@@ -21,3 +21,21 @@ a {
   color: #8AA8F0;
   padding: 2rem;
 }
+
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.MuiCard-root {
+  margin: 1rem;
+}
+
+.etusivu-container {
+  display: flex;
+  color: black;
+}
