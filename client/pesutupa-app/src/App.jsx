@@ -1,28 +1,77 @@
-import "./App.css";
-import { Etusivu } from "./pages/Home";
-import { Login } from "./pages/Login";
-import { Profiili } from "./pages/Profiili";
-import { UusiVaraus } from "./pages/UusiVaraus";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { OmatVaraukset } from "./pages/OmatVaraukset";
-import { Navbar } from "./components/AppBar";
+import { Card, Tab, Tabs } from "@blueprintjs/core";
+import { useState, useContext, useCallback, useEffect } from "react";
+import { UserContext } from "./context/UserContext";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Pesutupapp from "./pages/Pesutupapp";
+import Loader from "./pages/Loader";
 
 const App = () => {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <div className="appi">
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Etusivu} />
-            <Route exact path="/profiili" component={Profiili} />
-            <Route exact path="/uusivaraus" component={UusiVaraus} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/omatvaraukset" component={OmatVaraukset} />
-          </Switch>
-        </div>
-      </BrowserRouter>
-    </div>
+  const [currentTab, setCurrentTab] = useState("login");
+  const [userContext, setUserContext] = useContext(UserContext);
+  const url = "http://localhost:8081/";
+
+  const verifyUser = useCallback(() => {
+    fetch(url + "users/refreshToken", {
+      method: "POST",
+      credentials: "include",
+      headers: { "Content-Type": "application/json" },
+    }).then(async (response) => {
+      if (response.ok) {
+        const data = await response.json();
+        setUserContext((oldValues) => {
+          return { ...oldValues, token: data.token };
+        });
+      } else {
+        setUserContext((oldValues) => {
+          return { ...oldValues, token: null };
+        });
+      }
+      // call refreshToken every 5 minutes to renew the authentication token.
+      setTimeout(verifyUser, 5 * 60 * 1000);
+    });
+  }, [setUserContext]);
+
+  useEffect(() => {
+    verifyUser();
+  }, [verifyUser]);
+
+  /**
+   * Sync logout across tabs
+   */
+  const syncLogout = useCallback((event) => {
+    if (event.key === "logout") {
+      window.location.reload();
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("storage", syncLogout);
+    return () => {
+      window.removeEventListener("storage", syncLogout);
+    };
+  }, [syncLogout]);
+
+  return userContext.token === null ? (
+    <Card
+      elevation="1"
+      style={{
+        maxWidth: "400px",
+        float: "none",
+        margin: "0 auto",
+        marginTop: "300px",
+      }}
+    >
+      <Tabs id="Tabs" onChange={setCurrentTab} selectedTabId={currentTab}>
+        <Tab id="login" title="Login" panel={<Login />} />
+        <Tab id="register" title="Register" panel={<Register />} />
+        <Tabs.Expander />
+      </Tabs>
+    </Card>
+  ) : userContext.token ? (
+    <Pesutupapp />
+  ) : (
+    <Loader />
   );
 };
 

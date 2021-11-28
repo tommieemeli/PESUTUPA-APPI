@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export const Etusivu = () => {
+const Home = () => {
   const stylet = useStyles();
 
   return (
@@ -65,3 +65,5 @@ export const Etusivu = () => {
     </div>
   );
 };
+
+export default Home;
