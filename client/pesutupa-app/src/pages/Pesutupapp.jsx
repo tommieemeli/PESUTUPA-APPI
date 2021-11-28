@@ -51,14 +51,6 @@ const Pesutupapp = () => {
     }
   }, [userContext.details, fetchUserDetails]);
 
-  const refetchHandler = () => {
-    // set details to undefined so that spinner will be displayed and
-    //  fetchUserDetails will be invoked from useEffect
-    setUserContext((oldValues) => {
-      return { ...oldValues, details: undefined };
-    });
-  };
-
   const logoutHandler = () => {
     const url = "http://localhost:8081/";
 
@@ -125,7 +117,6 @@ const Pesutupapp = () => {
           minimal
           intent="primary"
         />
-        <Button text="Refetch" intent="primary" onClick={refetchHandler} />
       </div>
     </>
   );
