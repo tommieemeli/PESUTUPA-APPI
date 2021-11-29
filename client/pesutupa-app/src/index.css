@@ -53,3 +53,30 @@ a {
 .loader {
   margin: 100px auto;
 }
+
+.varauslista {
+  height: 650px;
+  background-color: #99eeff;
+  border-radius: 30px;
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+}
+
+.varauslista-otsikko {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Koulen", serif;
+  color: #13163F;
+  font-size: 40px;
+  letter-spacing: 0px;
+}
+
+.varauslista-lista {
+  width: 90%;
+  height: 470px;
+  background-color: #13163f;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 0 auto;
+}
