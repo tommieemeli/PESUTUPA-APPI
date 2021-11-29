@@ -78,7 +78,7 @@ const Pesutupapp = () => {
           <Link to="/profiili">Profiili</Link>
           <Link to="/omatvaraukset">Omat varaukset</Link>
           <Link to="/uusivaraus">Uusi varaus</Link>
-          <Link to="#">
+          <Link to="/">
             <Button
               color="secondary"
               variant="contained"
