@@ -14,6 +14,11 @@ const PesutuvanVaraukset = [
     aloitusaika: "08:00",
     lopetusaika: "09:00",
   },
+  {
+    pvm: "01.09.",
+    aloitusaika: "08:00",
+    lopetusaika: "09:00",
+  },
 ];
 
 const KuivaushuoneenVaraukset = [];

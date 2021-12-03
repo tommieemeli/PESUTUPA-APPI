@@ -77,7 +77,8 @@ a {
   width: 100%;
   height: 470px;
   background-color: #13163f;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   border-radius: 12px;
   margin: 0 auto;
   padding: 30px;
