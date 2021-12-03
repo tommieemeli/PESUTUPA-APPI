@@ -1,5 +1,6 @@
 import React from "react";
 import VarausListaVaraus from "./VarausListaVaraus";
+import VarausListaUusiVaraus from "./VarausListaUusiVaraus";
 
 const VarausLista = ({ title, varaukset }) => {
   console.log(varaukset);
@@ -14,6 +15,7 @@ const VarausLista = ({ title, varaukset }) => {
             lopetusaika={varaus.lopetusaika}
           ></VarausListaVaraus>
         ))}
+        {varaukset.length == 0 && <VarausListaUusiVaraus />}
       </div>
     </div>
   );

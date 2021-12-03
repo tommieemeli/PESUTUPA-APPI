@@ -16,7 +16,7 @@ const PesutuvanVaraukset = [
   },
 ];
 
-const KuivaushuoneenVaraukset = [{}];
+const KuivaushuoneenVaraukset = [];
 
 const OmatVaraukset = () => {
   return (
