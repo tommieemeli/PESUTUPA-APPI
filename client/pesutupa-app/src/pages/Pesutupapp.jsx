@@ -79,11 +79,7 @@ const Pesutupapp = () => {
           <Link to="/omatvaraukset">Omat varaukset</Link>
           <Link to="/uusivaraus">Uusi varaus</Link>
           <Link to="/">
-            <Button
-              color="secondary"
-              variant="contained"
-              onClick={logoutHandler}
-            >
+            <Button color="primary" variant="contained" onClick={logoutHandler}>
               <i class="far fa-sign-out-alt"></i>Log out
             </Button>
           </Link>
@@ -111,12 +107,6 @@ const Pesutupapp = () => {
             </Switch>
           </div>
         </BrowserRouter>
-        <Button
-          text="Logout"
-          onClick={logoutHandler}
-          minimal
-          intent="primary"
-        />
       </div>
     </>
   );
