@@ -31,7 +31,7 @@ const Home = () => {
               (icon)
             </Typography>
             <Link to="/omatvaraukset">
-              <Button size="small" variant="contained" color="secondary">
+              <Button size="small" variant="contained" color="pink">
                 Omat varaukset
               </Button>
             </Link>
@@ -43,7 +43,7 @@ const Home = () => {
               (icon)
             </Typography>
             <Link to="/uusivaraus">
-              <Button size="small" variant="contained" color="secondary">
+              <Button size="small" variant="contained" color="pink">
                 Uusi varaus
               </Button>
             </Link>
@@ -55,7 +55,7 @@ const Home = () => {
               (icon)
             </Typography>
             <Link to="/profiili">
-              <Button size="small" variant="contained" color="secondary">
+              <Button size="small" variant="contained" color="pink">
                 Oma profiili
               </Button>
             </Link>
