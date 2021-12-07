@@ -8,8 +8,9 @@ const VarausLista = ({ title, varaukset }) => {
     <div className="varauslista">
       <h2 className="varauslista-otsikko">{title}</h2>
       <div className="varauslista-lista">
-        {varaukset.map((varaus) => (
+        {varaukset.map((varaus, x) => (
           <VarausListaVaraus
+            key={x}
             pvm={varaus.pvm}
             aloitusaika={varaus.aloitusaika}
             lopetusaika={varaus.lopetusaika}
