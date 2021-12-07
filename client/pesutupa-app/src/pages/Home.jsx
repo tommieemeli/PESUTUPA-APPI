@@ -1,67 +1,77 @@
 import React from "react";
-import Container from "@mui/material/Container";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import cx from "clsx";
-import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
-
-const useStyles = makeStyles(() => ({
-  card: {
-    borderRadius: 25,
-    backgroundColor: "#99EEFF",
-  },
-}));
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import { useMediaQuery } from "@material-ui/core";
+import { useTheme } from "@mui/material/styles";
+import EtusivuLinkki from "../components/etusivu/EtusivuLinkki";
 
 const Home = () => {
-  const stylet = useStyles();
+  const theme = useTheme();
+  const showStack = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (
     <div>
-      <Container className={cx(stylet.container)}>
-        <Card
-          classes={stylet}
-          sx={{ minWidth: 275 }}
-          className={cx(stylet.card)}
+      {!showStack && (
+        <Grid
+          direction="row"
+          justifyContent="center"
+          container
+          spacing={10}
+          sx={{ marginTop: "10px" }}
         >
-          <CardContent>
-            <Typography variant="h5" component="div">
-              (icon)
-            </Typography>
-            <Link to="/omatvaraukset">
-              <Button size="small" variant="contained" color="pink">
-                Omat varaukset
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
-        <Card sx={{ minWidth: 275 }} className={cx(stylet.card)}>
-          <CardContent>
-            <Typography variant="h5" component="div">
-              (icon)
-            </Typography>
-            <Link to="/uusivaraus">
-              <Button size="small" variant="contained" color="pink">
-                Uusi varaus
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
-        <Card sx={{ minWidth: 275 }} className={cx(stylet.card)}>
-          <CardContent>
-            <Typography variant="h5" component="div">
-              (icon)
-            </Typography>
-            <Link to="/profiili">
-              <Button size="small" variant="contained" color="pink">
-                Oma profiili
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
-      </Container>
+          <Grid item xs={12} md={6} lg={4}>
+            <Grid container justifyContent="center">
+              <EtusivuLinkki
+                to="/omatvaraukset"
+                text="Omat varaukset"
+                iconType="omatVaraukset"
+              ></EtusivuLinkki>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <Grid container justifyContent="center">
+              <EtusivuLinkki
+                to="/uusivaraus"
+                text="Uusi varaus"
+                iconType="uusiVaraus"
+              ></EtusivuLinkki>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <Grid container justifyContent="center">
+              <EtusivuLinkki
+                to="/profiili"
+                text="Oma profiili"
+                iconType="omaProfiili"
+              ></EtusivuLinkki>
+            </Grid>
+          </Grid>
+        </Grid>
+      )}
+      {showStack && (
+        <Stack
+          justifyContent="center"
+          direction="row"
+          spacing={15}
+          sx={{ marginTop: "150px" }}
+        >
+          <EtusivuLinkki
+            to="/omatvaraukset"
+            text="Omat varaukset"
+            iconType="omatVaraukset"
+          ></EtusivuLinkki>
+          <EtusivuLinkki
+            to="/uusivaraus"
+            text="Uusi varaus"
+            iconType="uusiVaraus"
+          ></EtusivuLinkki>
+          <EtusivuLinkki
+            to="/profiili"
+            text="Oma profiili"
+            iconType="omaProfiili"
+          ></EtusivuLinkki>
+        </Stack>
+      )}
     </div>
   );
 };
