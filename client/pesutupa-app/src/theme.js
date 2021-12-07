@@ -3,13 +3,16 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
     palette: {
       primary: {
-        main: "#99eeff"
+        main: "#99EEFF"
       },
       secondary: {
-        main: "#13163f"
+        main: "#13163F"
+      },
+      tertiary: {
+        main: "#6666FF"
       },
       pink: {
-        main: "rgb(220, 168, 220)"
+        main: "#DCA8DC"
       }
     },
   });

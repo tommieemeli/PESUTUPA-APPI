@@ -23,6 +23,15 @@ code {
 }
 
 h1 {
+  font-family: "Keania One", serif;
+  font-weight: 400;
+  font-size: 45px;
+  font-style: normal;
+  color: #8AA8F0;
+  text-align: center;
+  letter-spacing: .4px;
+}
+h2 {
   color: #8AA8F0;
   text-align: center;
 }
@@ -45,13 +54,26 @@ a {
   margin: 1rem;
 }
 
-.etusivu-container {
-  display: flex;
-  color: black;
-}
-
 .loader {
   margin: 100px auto;
+}
+
+.etusivu-linkki {
+    border-radius: 25px !important;
+    background-color: #99EEFF !important;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    margin: 0;
+}
+
+.etusivu-linkki-linkki {
+  padding: 0px !important;
+}
+
+.etusivu-linkki-ikoni {
+    color:#6666FF;
+    font-size: 200px !important;
 }
 
 .varauslista {
@@ -106,12 +128,29 @@ a {
   margin-bottom: 5px;
 }
 
+.varauslista-varaustekstiotsikko {
+  word-wrap: break-word;
+  word-break: break-word;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Inria Sans", sans-serif;
+  color: #13163F;
+  font-size: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
 .varauslista-napit {
   margin-top: 30px;
 }
 
+.varauslista-napit-uusivaraus {
+  margin-top: 25px;
+}
+
 .ikoni-nappi {
-  height: 31px;
+  height: 42px;
   min-width: 40px !important;
   padding: 4px 0 !important;
   margin-left: 10px !important;
