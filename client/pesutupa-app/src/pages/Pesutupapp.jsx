@@ -1,14 +1,17 @@
 import React, { useContext, useEffect, useCallback } from "react";
 import Home from "./Home";
+import Loader from "./Loader";
 import Login from "./Login";
 import Profiili from "./Profiili";
+import OmatVaraukset from "./OmatVaraukset";
 import UusiVaraus from "./UusiVaraus";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import OmatVaraukset from "./OmatVaraukset";
-import { UserContext } from "../context/UserContext";
-import Loader from "./Loader";
 import { Link } from "react-router-dom";
+import cx from "clsx";
+import { UserContext } from "../context/UserContext";
 import Button from "@mui/material/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 const Pesutupapp = () => {
   const [userContext, setUserContext] = useContext(UserContext);
@@ -73,14 +76,23 @@ const Pesutupapp = () => {
       <>
         <nav className="navbar">
           <Link to="/">
-            <h1>PESUTUPAPP</h1>
+            <h1>PesutupAPP</h1>
           </Link>
           <Link to="/profiili">Profiili</Link>
           <Link to="/omatvaraukset">Omat varaukset</Link>
           <Link to="/uusivaraus">Uusi varaus</Link>
           <Link to="/">
-            <Button color="primary" variant="contained" onClick={logoutHandler}>
-              <i class="far fa-sign-out-alt"></i>Log out
+            <Button
+              startIcon={<LogoutIcon />}
+              color="primary"
+              variant="contained"
+              onClick={logoutHandler}
+              style={{
+                color: "#6666FF",
+                fontWeight: "bold",
+              }}
+            >
+              Kirjaudu ulos
             </Button>
           </Link>
         </nav>
