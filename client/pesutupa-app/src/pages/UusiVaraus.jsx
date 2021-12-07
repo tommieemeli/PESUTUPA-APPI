@@ -4,7 +4,7 @@ import Kalenteri from "../components/kalenteri/Kalenteri";
 const UusiVaraus = () => {
   return (
     <div>
-      <h1>uusi varaus</h1>
+      <h2>uusi varaus</h2>
       <Kalenteri />
     </div>
   );

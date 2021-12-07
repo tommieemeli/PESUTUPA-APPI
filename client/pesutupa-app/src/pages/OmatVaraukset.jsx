@@ -26,7 +26,7 @@ const KuivaushuoneenVaraukset = [];
 const OmatVaraukset = () => {
   return (
     <div>
-      <h1>omat varaukset</h1>
+      <h2>omat varaukset</h2>
       <Grid direction="row" justifyContent="center" container spacing={10}>
         <Grid item xs={12} md={6}>
           <Grid
