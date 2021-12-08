@@ -9,7 +9,7 @@ School project / Pesutuvan hallinta ja varausjärjestelmä
 - Now you should have two (2) terminals, one for server and one for client
 
 # Client
-- To start client, type "npm start" to your terminal in #pesutupa-app folder
+- To start client, type "npm start" to your terminal in pesutupa-app folder
 - It will open new web browser for the app, once its done building
 
 # Server
