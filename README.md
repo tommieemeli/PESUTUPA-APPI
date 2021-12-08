@@ -6,10 +6,10 @@ School project / Pesutuvan hallinta ja varausjärjestelmä
 - First, you need to clone repo
 - Cloned? Nice, open terminal ( cmd.exe ), and navigate yourself to PESUTUPA-APPI/client/pesutupa-app -> and install debendencies ( npm install )
 - When done, open new terminal ( cmd.exe ), and navigate to PESUTUPA-APPI/server 
-- Now you should have two #(2) terminals, one for server and one for client
+- Now you should have two (2) terminals, one for server and one for client
 
 # Client
-- To start client, type "npm start" to your terminal in pesutupa-app folder
+- To start client, type "npm start" to your terminal in #pesutupa-app folder
 - It will open new web browser for the app, once its done building
 
 # Server
