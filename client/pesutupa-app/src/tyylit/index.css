@@ -1,0 +1,195 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+.auth-form {
+  margin-top: 10px;
+}
+
+body {
+  margin: 0;
+  margin-top: 10;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #13163F;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-family: "Keania One", serif;
+  font-weight: 400;
+  font-size: 45px;
+  font-style: normal;
+  color: #8AA8F0;
+  text-align: center;
+  letter-spacing: .4px;
+}
+h2 {
+  color: #8AA8F0;
+  text-align: center;
+}
+
+a {
+  color: #8AA8F0;
+  padding: 2rem;
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.MuiCard-root {
+  margin: 1rem;
+}
+
+.loader {
+  margin: 100px auto;
+}
+
+.etusivu-linkki {
+    border-radius: 25px !important;
+    background-color: #99EEFF !important;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    margin: 0;
+}
+
+.etusivu-linkki-linkki {
+  padding: 0px !important;
+}
+
+.etusivu-linkki-ikoni {
+    color:#6666FF;
+    font-size: 200px !important;
+}
+
+.varauslista {
+  height: 650px;
+  background-color: #99eeff;
+  border-radius: 30px;
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+.varauslista-otsikko {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Koulen", serif;
+  color: #13163F;
+  font-size: 30px;
+  letter-spacing: 0px;
+}
+
+.varauslista-lista {
+  width: 100%;
+  height: 470px;
+  background-color: #13163f;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.varauslista-varaus {
+  width: 100%;
+  height: 180px;
+  background-color: #dca8dc;
+  border-radius: 12px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.varauslista-varausteksti {
+  word-wrap: break-word;
+  word-break: break-word;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Inria Sans", sans-serif;
+  color: #13163F;
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.varauslista-varaustekstiotsikko {
+  word-wrap: break-word;
+  word-break: break-word;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Inria Sans", sans-serif;
+  color: #13163F;
+  font-size: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.varauslista-napit {
+  margin-top: 30px;
+}
+
+.varauslista-napit-uusivaraus, .varauskalenteri-nappi  {
+  margin-top: 25px;
+}
+
+.ikoni-nappi {
+  height: 42px;
+  min-width: 40px !important;
+  padding: 4px 0 !important;
+  margin-left: 10px !important;
+}
+
+.ikoni-nappi > span {
+  margin: 0;
+}
+
+.varauskalenteri {
+  height: 500px;
+  background-color: #99eeff;
+  border-radius: 30px;
+  max-width: 650px;
+  width: 100%;
+  padding: 35px;
+  margin: auto;
+}
+
+.varauskalenteri-kentta {
+  background-color: #FFFFFF;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media (min-width:490px) {
+  .varauslista-otsikko {
+    font-size: 40px;
+  }
+}
+
+@media (min-width:900px) {
+  .varauslista-otsikko {
+    font-size: 32px;
+  }
+}
+
+@media (min-width:1050px) {
+  .varauslista-otsikko {
+    font-size: 40px;
+  }
+}

@@ -28,7 +28,7 @@ const App = () => {
         });
       }
       // call refreshToken every 5 minutes to renew the authentication token.
-      setTimeout(verifyUser, 5 * 60 * 1000);
+      setTimeout(verifyUser, 30 * 60 * 1000);
     });
   }, [setUserContext]);
 

@@ -70,6 +70,7 @@ const Login = () => {
         </FormGroup>
         <Button
           intent="primary"
+          color="primary"
           fill
           type="submit"
           disabled={isSubmitting}
