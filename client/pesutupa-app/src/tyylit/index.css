@@ -145,7 +145,7 @@ a {
   margin-top: 30px;
 }
 
-.varauslista-napit-uusivaraus {
+.varauslista-napit-uusivaraus, .varauskalenteri-nappi  {
   margin-top: 25px;
 }
 
@@ -158,6 +158,22 @@ a {
 
 .ikoni-nappi > span {
   margin: 0;
+}
+
+.varauskalenteri {
+  height: 500px;
+  background-color: #99eeff;
+  border-radius: 30px;
+  max-width: 650px;
+  width: 100%;
+  padding: 35px;
+  margin: auto;
+}
+
+.varauskalenteri-kentta {
+  background-color: #FFFFFF;
+  width: 100%;
+  border-radius: 5px;
 }
 
 @media (min-width:490px) {
