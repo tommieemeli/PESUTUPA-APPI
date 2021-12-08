@@ -7,10 +7,8 @@ import OmatVaraukset from "./OmatVaraukset";
 import UusiVaraus from "./UusiVaraus";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import cx from "clsx";
 import { UserContext } from "../context/UserContext";
 import Button from "@mui/material/Button";
-import { makeStyles } from "@material-ui/core/styles";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 const Pesutupapp = () => {
@@ -78,9 +76,9 @@ const Pesutupapp = () => {
           <Link to="/">
             <h1>PesutupAPP</h1>
           </Link>
-          <Link to="/profiili">Profiili</Link>
           <Link to="/omatvaraukset">Omat varaukset</Link>
           <Link to="/uusivaraus">Uusi varaus</Link>
+          <Link to="/profiili">Profiili</Link>
           <Link to="/">
             <Button
               startIcon={<LogoutIcon />}
