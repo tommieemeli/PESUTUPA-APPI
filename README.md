@@ -5,7 +5,7 @@ School project / Pesutuvan hallinta ja varausjärjestelmä
 # How to start project local?
 - First, you need to clone repo. Don't know how? I got you, https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 - Cloned? Nice, open terminal ( cmd.exe ), and navigate yourself to PESUTUPA-APPI/client/pesutupa-app -> and install debendencies ( type "npm install" )
-- When done, open new terminal ( cmd.exe ), and navigate to PESUTUPA-APPI/server 
+- When done, open new terminal ( cmd.exe ), and navigate to PESUTUPA-APPI/server and install debendencies ( npm install )
 - Now you should have two (2) terminals, one for server and one for client
 
 # Client
