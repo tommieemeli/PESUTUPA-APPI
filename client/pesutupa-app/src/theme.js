@@ -8,9 +8,6 @@ const theme = createTheme({
       secondary: {
         main: "#13163F"
       },
-      tertiary: {
-        main: "#6666FF"
-      },
       pink: {
         main: "#DCA8DC"
       }
