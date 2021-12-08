@@ -10,6 +10,7 @@ School project / Pesutuvan hallinta ja varausjärjestelmä
 
 # Client
 - To start client, type "npm start" to your terminal in pesutupa-app folder
+- It will open new web browser for the app, once its done building
 
 # Server
 - To start server, you have to options
