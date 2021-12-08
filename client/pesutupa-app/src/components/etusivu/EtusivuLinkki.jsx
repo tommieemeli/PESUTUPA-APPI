@@ -30,7 +30,7 @@ const EtusivuLinkki = ({ to, text, iconType }) => {
             variant="contained"
             color="pink"
             style={{
-              color: "rgb(102, 102, 255)",
+              color: "#6666FF",
               padding: "20px 50px",
               borderRadius: "17px",
               fontWeight: "bold",

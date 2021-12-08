@@ -30,7 +30,7 @@ const VarausListaVaraus = ({ pvm, aloitusaika, lopetusaika }) => {
         <Button
           className="ikoni-nappi"
           startIcon={<DeleteIcon />}
-          size="small"
+          size="extra-large"
           variant="contained"
           color="secondary"
           sx={{ padding: "4px 0" }} //mitä tää tekee?
