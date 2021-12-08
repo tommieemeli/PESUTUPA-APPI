@@ -1,3 +1,3 @@
 # PESUTUPA-APPI
 
-School project / develop an app jeeeeee
+School project / Pesutuvan hallinta ja varausjärjestelmä
